@@ -2,7 +2,7 @@
  * Start Bootstrap - Scrolling Nav (http://startbootstrap.com/)
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
+*/
 
 body {
     width: 100%;
@@ -14,7 +14,6 @@ html {
     height: 100%;
 }
 
-/* looks nice, but doesn't actually work
 @media(min-width:767px) {
     .navbar {
         padding: 20px 0;
@@ -26,16 +25,16 @@ html {
     .top-nav-collapse {
         padding: 0;
     }
+
 }
-*/
 
-/* from the theme developer */
+/* from the theme developer, but I'm not using that*/
 /*The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
-of those sections to manage the look and feel of the site. */
-
+of those sections to manage the look and feel of the site.
+*/
 .main-section {
     height: 100%;
-    padding-top: 400px;
+    padding-top:150px;
     text-align: center;
     background: #fff;
 }

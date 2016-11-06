@@ -9,13 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Regatta Hub - Create and manage courses</title>
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
 
     <!-- Custom CSS -->
-    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,24 +41,30 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="{{ "/" | prepend: site.baseurl }}">Regatta Hub</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav page-scroll">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="{{ "/courses" | prepend: site.baseurl }}">Courses</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="{{ "/build" | prepend: site.baseurl }}">Build</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="{{ "/run" | prepend: site.baseurl }}">Run</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{{ "/contact" | prepend: site.baseurl }}">Contact</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{{ "/help" | prepend: site.baseurl }}">Help</a>
                     </li>
                 </ul>
             </div>
@@ -67,31 +74,31 @@
     </nav>
 
     <!-- Intro Section -->
-    <section id="intro" class="intro-section">
+    <section class="main-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                  <h1>Your Courses</h1>
-		  <div id="courses-list">
-		    <!--Replace this with a list of saved courses.-->
-		  </div>
-                  <a class="btn btn-default" href="/build/">Build a new course!</a>
+              <div class="col-lg-12">
+		{{ content }}
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Custom CSS -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="{{ "/js/jquery.js" | prepend: site.baseurl }}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
 
-    <!-- Scrolling Nav JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/template.js"></script>
-
+    <!-- Scrolling Nav JavaScript
+    <script src="{{ "/js/jquery.easing.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/template.js" | prepend: site.baseurl }}"></script>
+ -->
+    {% if jekyll.environment == 'production' %}
+    {% include analysis.html %}
+    {% endif %}
 </body>
 
 </html>
