@@ -9,7 +9,7 @@
 title: Regatta Hub
 email: contact@regattahub.com
 description: > # this means to ignore newlines until "baseurl:"
-Build sailing courses and impliment them on the water.
+    Build sailing courses and impliment them on the water.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://regattahub.com" # the base hostname & protocol for your site
 twitter_username: RShomberg
