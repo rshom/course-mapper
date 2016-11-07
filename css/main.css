@@ -34,7 +34,7 @@ of those sections to manage the look and feel of the site.
 */
 .main-section {
     height: 100%;
-    padding-top:100px;
+    padding-top:150px; /* 150 is great for the desktop site. I want less for mobile */
     text-align: left;
     background: #fff;
 }

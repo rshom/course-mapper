@@ -3,11 +3,65 @@ layout: default
 title: Run
 permalink: /run/
 ---
-<h1>Run Courses</h1>
+<h1 id="courseName">Course Name</h1>
+<h2>Set a Mark</h2>
+<div class="form-group">
+<form id="selectMarkForm">
+  <select name="selectMark" id="selectMark" class="form-control">
+    <option value="boat">Boat</option>
+    <option value="pin">Pin</option>
+  </select>
+</div>
+<div id="markInfo">
+  <h3>Weather Mark</h3>
+  <p><strong>Latitude:&nbsp&nbsp&nbsp&nbsp</strong>  <span>12.12321</span></p>
+  <p><strong>Longitude:&nbsp</strong> <span>12.12321</span></p>
+</div>
+  <button class="btn btn-success form-control">Go to Mark</button>
+</form>
+<h2>Update Boat Position</h2>
+<div class="col-sm-12 col-md-6" id="boatUpdate">
+  <form>
+    <div class="form-group">
+      <button type="button" class="btn btn-default form-control" onclick="inputPosition()">Use my current position</button>
+    </div>
+    <div class="form-group">
+      <label for"boatLatitude">Latitude:</label>
+      <input type="number" min="-90" max="90" step="0.0000000000001" name="boatLatitude" id="boatLatitude" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for"boatLongitude">Longitude:</label>
+      <input type="number" min="-180" max="180" step="0.0000000001" name="boatLongitude" id="boatLongitude" class="form-control">
+    </div>
+    <!-- Include a bunch of hidden inputs for the marks
+	 that probably isnt the best way to do that
+      -->
+    <input type="hidden" name="marks" id="marksList" value="hello">
+    <input type="submit" class="btn btn-success" value="Update" >
+  </form>
+</div>
 
-<p>If you are running a course, you either are acting as the race committee or as a mark boat. Committee can do anything, but their main purpose is to update their own position. Mark boats just set marks. </p>
+<script>
+    function inputPosition() {
+	navigator.geolocation.getCurrentPosition(
+	    function(position) {
+		// run for success
+		document.getElementById("boatLatitude").value=position.coords.latitude;
+		document.getElementById("boatLongitude").value=position.coords.longitude;
+	    },
+	    function(position) {
+		// run for error
+		console.log('error getting position');
+	    },
+	    {
+		// helper
+		timeout: 50000,
+		maximumAge: Infinity,
+		enableHighAccuracy: true
+		
+	    }
+	);
+	
+}
 
-<h1>TODO</h1>
-<ul>
-  <li>everything</li>
-</ul>
+</script>

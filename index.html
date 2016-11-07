@@ -2,19 +2,36 @@
 layout: default
 title: Home
 ---
-<h1>Welcome to Regatta Hub</h1>
-<!-- for small screens, I want these to stack -->
-<a class="btn btn-default" href="/build/">Build a new course</a>
-<a class="btn btn-default" href="/courses/">See your courses</a>
-<!-- Even if you load an old course, you still need to update wind/rc position -->
-<a class="btn btn-default" href="#">Connect to a shared course</a>
-<!-- Initially implement this by having a standard course on the system -->
-<!-- Value of a shared course is that the rc controlls everything and shares it's position -->
+<!-- Need some kind of intro, but I'm not sure what to put yet.
+<div>
+  <p>RegattaHub makes building courses and implementing them on the water easy. If you are having trouble at any point, head over to the <a href="/help/">help section</a>. I do my best to answer all possible questions there. If you still need help, head over to the <a href="/contact">contact section</a> or just shoot me an email at <a href="mailto:russ@regattahub.com">russ@regattahub.com</a>.</p>
+</div>
+-->
 
+<div id="welcome">
+<h2>Welcome to RegattaHub,</h2>
+<p>Our is to help race committees and instructors build better sailing courses faster. We believe better courses make sailing more fun. <a href="{{ "/about" | prepend: site.baseurl }}"> Learn more...</a></p>
+<p>Getting s started by clicking one of the buttons below</p>
+<p><a class="btn btn-default" href="{{ "/build" | prepend: site.baseurl }}">Build a new course</a><p>
+<p><a class="btn btn-default" href="{{ "/connect" | prepend: site.baseurl }}">Connect to a shared course</a><p>
+</div>
 
-<h1>Getting Started</h1>
-<p>Regatta Hub makes building courses and implementing them on the water easy. I might be biased since I built it. If you are having trouble at any point, head over to the <a href="/help/">help section</a>. I do my best to answer all possible questions there. If you still need help, head over to the <a href="/contact">contact section</a> or just shoot me an email at <a href="mailto:russ@regattahub.com">russ@regattahub.com</a>.</p>
+<div id="mailingList">
+  <h2>Join the Mailing List</h2>
+  <p>Stay updated for official releases and new features by joining the mailing list.</p>
+  <form>
+    <div class="form-group">
+    <input type="email" name="user-email" placeholder="youremail@example.com">
+    <button class="btn btn-default">Join</button>
+    </div>
+  </form>
+</div>
 
+<div id="gettingStarted">
+
+</div>
+
+<!--
 <h1>TODO</h1>
 <ul>
   <li>fix the rest of the pages</li>
@@ -33,3 +50,4 @@ title: Home
     <li>video demo on use</li>
   </ul>
 </ul>
+-->

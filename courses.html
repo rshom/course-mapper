@@ -4,7 +4,8 @@ title: Courses
 permalink: /courses/
 ---
 <h1>Your Courses</h1>
-<div id="your-courses-list">
+<div class="row">
+<div id="saved-courses-list" class="col-md-6 col-sm-12">
   <!-- Replace this with a list of saved courses. -->
   <!-- How do I save courses 
        If it's an app, I can save to their device,
@@ -13,14 +14,60 @@ permalink: /courses/
        I don't think so. 
        
     -->
+  <!-- table items should expand when clicked on or just take you to that view course page -->
+  <table class="table">
+    <thead>
+      <tr>
+	<th>Saved Courses</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Opti Triangle</td>
+      </tr>
+      <tr>
+        <td>420 W/L</td>
+      </tr>
+      <tr>
+        <td>Narragansett Custom</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><a class="btn btn-default" href="/build/">Build a new course!</a></p>
 </div>
 
-<a class="btn btn-default" href="/build/">Build a new course!</a>
-<p>These are courses you have saved in the past. You can view, edit (or delete), run, or share these courses.</p>
-
-<h1>Shared Courses</h1>
-<p>These are other peoples courses that you have connected to. You can view,update, or connect to these. They automatically update occasionally. Courses are shared via a regattahub.com. They can be openly shared in the database or privately shared via direct link. Privately shared courses can be password protected as well.</p>
-  
+<div id="your-courses-list" class="col-md-6 col-sm-12">
+  <!-- Replace this with a list of saved courses. -->
+  <!-- How do I save courses 
+       If it's an app, I can save to their device,
+       but if they log in from an account, they want to get their courses from all devices
+       Will users want to build courses on one device and use them on another.
+       I don't think so. 
+       
+    -->
+  <table class="table">
+    <thead>
+      <tr>
+	<th>Shared Courses</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Russ Triangle</td>
+      </tr>
+      <tr>
+        <td>Joe Course</td>
+      </tr>
+      <tr>
+        <td>Sail Newport</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><a class="btn btn-default" href="/build/">Connect to a shared course!</a></p>
+</div>
+</div>
+<!--
+<div class="row">
 <h1>TODO</h1>
 <ul>
   <li>figure out how to save courses</li>
@@ -33,3 +80,5 @@ permalink: /courses/
     <li>Trapazoid</li>
   </ul>
 </ul>
+</div>
+-->
