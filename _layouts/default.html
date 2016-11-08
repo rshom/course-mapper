@@ -15,8 +15,6 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -85,15 +83,17 @@
 	      {{ content }}
 	    </div>
 	  </div>
-	  <div class="row">
-	    <div class="col-sm-12">
-	      &copy; 2016 Shomberg Systems 
-	    </div>
-        </div>
+	</div>	  
     </section>
+    <div class="footer">
+      <div class="container">
+	<p class="text-muted">&copy; 2016 Shomberg Systems</p>
+      </div>
+    </div>
 
 
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
     
     <!-- jQuery -->
