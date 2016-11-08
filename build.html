@@ -7,7 +7,7 @@ permalink: /build/
 
 
 
-<form id="initialCourseParameters" action="/view-course/index.html" method="GET">
+<form id="initialCourseParameters" action="{{ "/view-course/index.html" | prepend:site.baseurl }}" method="GET">
   <h2>Basic</h2>
   <div class="form-group">
     <input type="hidden" name="inputSource" value="builder">

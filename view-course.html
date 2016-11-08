@@ -14,12 +14,12 @@ permalink: /view-course/
 <div class="row">
   <div class="col-sm-12 col-md-6" id="courseView">
     <h3>View</h3>
-    <p id="output">There is an error! Contact russ@regattahub.com if this continues.</p>
+    <p id="output">There is an error! Contact russ if this continues.</p>
     <p>Here there would be some sort of graphical representation of the course instead of just a list of marks.</p>
   </div>
   <div class="col-sm-12 col-md-6" id="runForm">
     <h3>Run</h3>
-    <form action="/run/" method="GET">
+    <form action="{{ "/run/" | prepend: site.baseurl }}" method="GET">
     <h4>Current Conditions</h4>
     <div class="form-group">
 	<label for"windBearing">Wind Bearing:</label>
