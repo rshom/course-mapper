@@ -141,7 +141,7 @@ function watchPosition(target) {
 	    var placeholder = document.getElementById('arrow'); // grab it by ID
 	    var imgRotation = relativeBearing;
 	    // if on a device with no bearing use target bearing
-	    var imgRotation = targetBearing;
+	    //var imgRotation = targetBearing;
 	    
 	    imgRotation = "rotate("+imgRotation+"deg)"; //make it a proper string
 	    placeholder.style.transform = imgRotation; //change it
